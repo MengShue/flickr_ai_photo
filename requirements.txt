@@ -1,0 +1,4 @@
+flickrapi==2.4.0
+aiohttp~=3.10.8
+openai==1.52.2
+Pillow~=10.1.0
