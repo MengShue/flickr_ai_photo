@@ -2,6 +2,10 @@
 
 This Python program allows users to download images from Flickr based on a search keyword via the command line. Additionally, it can process the downloaded images using OpenAI’s DALL·E to generate AI variations of the images.
 
+## Purpose
+
+This project is designed to assist in collecting large amounts of target images for machine learning training data. By automating the download of images from Flickr and generating AI-augmented variations, users can easily compile datasets for training and testing machine learning models. The AI-generated images can also serve as test data to evaluate model performance.
+
 ## Features
 
 * Search and Download Images from Flickr: Specify a keyword to search for images and download them asynchronously.
