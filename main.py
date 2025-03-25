@@ -2,11 +2,14 @@ import argparse
 import asyncio
 from flickr_client import FlickrClient
 from openai_client import OpenAIClient
+import os
+from dotenv import load_dotenv
 
-# Replace YOUR actual Flickr API Key and Secret
-FLICKR_API_KEY = ''
-FLICKR_API_SECRET = ''
-OPENAI_API_KEY = ''
+load_dotenv()
+
+FLICKR_API_KEY = os.getenv('FLICKR_API_KEY')
+FLICKR_API_SECRET = os.getenv('FLICKR_API_SECRET')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Download Flickr images and generate AI images.')

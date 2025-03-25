@@ -6,6 +6,8 @@ This Python program allows users to download images from Flickr based on a searc
 
 This project is designed to assist in collecting large amounts of target images for machine learning training data. By automating the download of images from Flickr and generating AI-augmented variations, users can easily compile datasets for training and testing machine learning models. The AI-generated images can also serve as test data to evaluate model performance.
 
+Elon Musk has stated that by 2024, AI training already exhausted all real-world data, making synthetic data generation essential. This project aims to address this need by providing tools to generate synthetic data.
+
 ## Features
 
 * Search and Download Images from Flickr: Specify a keyword to search for images and download them asynchronously.
@@ -61,13 +63,16 @@ pip install -r requirements.txt
 
 ## Configuration
 
-1. Set API Keys
-```commandline
-# main.py
-FLICKR_API_KEY = 'YOUR_FLICKR_API_KEY'
-FLICKR_API_SECRET = 'YOUR_FLICKR_API_SECRET'
-OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY'  # Leave empty if not using OpenAI DALL·E
+1. Create a `.env` file in the project directory with the following content:
+
+```bash
+FLICKR_API_KEY=your_flickr_api_key
+FLICKR_API_SECRET=your_flickr_api_secret
+OPENAI_API_KEY=your_openai_api_key
 ```
+
+Replace your_flickr_api_key, your_flickr_api_secret, and your_openai_api_key with your actual API keys.
+
 
 ## Usage
 Run the program using the command line:
