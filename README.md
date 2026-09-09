@@ -11,6 +11,13 @@ Elon Musk has stated that by 2024, AI training already exhausted all real-world 
 ## Features
 
 * Search and Download Images from Flickr: Specify a keyword to search for images and download them asynchronously.
+* License-aware by default: Excludes all-rights-reserved and no-derivatives
+  licenses (IDs 0, 3, 6, and 16) in the Flickr query and checks every result
+  again before downloading.
+* License audit trail: Prints the source and license for every result and saves
+  the same metadata to `flickr_licenses.json`. Licenses other than Flickr IDs
+  7–10 include a warning to review attribution, commercial-use, and other terms
+  before publishing or reusing the image or an AI-generated derivative.
 * AI Image Generation => OpenAI DALL·E: Generate AI image variations using OpenAI’s DALL·E 2.
 * Command Line Interface: Easily interact with the program using command-line arguments.
 
@@ -106,3 +113,8 @@ python main.py -s "mountain" -n 3
 For questions or suggestions, please contact meng.s.song@gmail.com.
 
 Disclaimer: This project is for educational purposes. The author is not responsible for any misuse of the software.
+
+Downloading an image does not transfer copyright. You are responsible for
+following the displayed license terms, including attribution requirements. The
+license metadata reflects Flickr's response at download time; retain the
+generated `flickr_licenses.json` file with your dataset.

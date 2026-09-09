@@ -24,10 +24,10 @@ def main():
     flickr_client = FlickrClient(FLICKR_API_KEY, FLICKR_API_SECRET)
 
     print('Searching...')
-    photo_urls = flickr_client.search_photos(args.search, args.number)
+    photos = flickr_client.search_photos(args.search, args.number)
 
     print('Downloading...')
-    asyncio.run(flickr_client.download_photos(photo_urls))
+    asyncio.run(flickr_client.download_photos(photos))
 
     if args.dalle > 0:
         photo_paths = [f'photo_{i+1}.jpg' for i in range(args.dalle)]
